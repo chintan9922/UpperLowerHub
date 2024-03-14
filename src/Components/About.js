@@ -1,43 +1,49 @@
 import React from "react";
-import { useState } from "react";
+// import { useState } from "react";
 
 export default function About() {
+    // const [myTheme, setMyTheme] = useState({
+    //     color: "black",
+    //     backgroundColor: "white",
+    // });
 
-    const [myTheme, setMyTheme] = useState({
-        color: 'black',
-        backgroundColor: 'white'
-    })
+    // const [btn, setBtn] = useState("Enable Dark Mode");
 
-    const [btn, setBtn] = useState("Enable Dark Mode");
-
-    const changeStyle = () => {
-        if(myTheme.color === 'black'){
-            setMyTheme({
-                color: 'white',
-                backgroundColor: 'black'
-            })
-            setBtn("Enable Light Mode")
-        }
-        else{
-            setMyTheme({
-                color: 'black',
-                backgroundColor: 'white'
-            })
-            setBtn("Enable Dark Mode")
-        }
-    }
-    
+    // const changeStyle = () => {
+    //     if(myTheme.color === 'black'){
+    //         setMyTheme({
+    //             color: 'white',
+    //             backgroundColor: 'black'
+    //         })
+    //         setBtn("Enable Light Mode")
+    //     }
+    //     else{
+    //         setMyTheme({
+    //             color: 'black',
+    //             backgroundColor: 'white'
+    //         })
+    //         setBtn("Enable Dark Mode")
+    //     }
+    // }
 
     return (
-        <div className="card" style={myTheme}>
-            <img src="https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png" className="card-img-top" style={{height: 200, width: 200, alignSelf:'center'}} alt="..." />
+        <div
+            className="card my-3"
+            // style={{ color: "black", backgroundColor: "white" }}
+        >
+            <img
+                src="https://icones.pro/wp-content/uploads/2021/02/icone-d-ecriture-de-texte-png-symbole-noir.png"
+                className="card-img-top my-5"
+                style={{ height: 200, width: 200, alignSelf: "center" }}
+                alt="..."
+            />
             <div className="card-body">
-                <h2 className="About Us">Card title</h2>
+                <h1 className="About Us my-3">UpperLowerHub</h1>
                 <p className="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
+                    Explore the dynamic interplay of upper and lower case letter
+                    with our diverse collection of text transformation.
                 </p>
-                <button className="btn btn-primary" onClick={changeStyle}>{btn}</button>
+                {/* <button className="btn btn-primary" onClick={changeStyle}>{btn}</button> */}
             </div>
         </div>
     );
