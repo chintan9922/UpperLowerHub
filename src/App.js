@@ -4,8 +4,8 @@ import "./App.css";
 import Navbar from "./Components/Navbar";
 import Textform from "./Components/Textform";
 import Alert from "./Components/Alert";
-// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-// import About from "./Components/About";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import About from "./Components/About";
 
 function App() {
     const [mode, setMode] = useState("light");
@@ -66,7 +66,7 @@ function App() {
 
     return (
         <>
-            {/* <Router> */}
+            <Router>
                 <Navbar
                     mode={mode}
                     changeMode={changeMode}
@@ -79,23 +79,24 @@ function App() {
                     className="container my-3"
                     style={{ color: mode === "light" ? "black" : "white" }}
                 >
-                    {/* <Routes>
+                    <Routes>
+                    
                         <Route exact path="/about" element={<About />} />
                         <Route
                             exact
                             path="/"
                             element={
-                                
-                            }
-                        />
-                    </Routes> */}
-                    <Textform
+                                <Textform
                                     title="Enter Your Text Here"
                                     mode={mode}
                                     alert={showAlert}
                                 />
+                            }
+                        />
+                    </Routes>
+                    
                 </div>
-            {/* </Router> */}
+            </Router>
         </>
         // <div className='container' style={{  borderColor:'black', height: "100vh", backgroundColor:'Highlight'}}>
         // <div style={{justifyContent:'center', padding:25, textAlign:'center'}}>
